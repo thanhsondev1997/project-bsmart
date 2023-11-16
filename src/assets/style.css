@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+}
+
+.header-top {
+    background-color: #0e0a38;
+}
+
+.container-header-top {
+    margin: auto;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding: 23px 0;
+    justify-content: space-between;
+}
+
+
+.header-icon ul{
+    display: flex;
+    color: white;
+    list-style: none;
+    margin-left: 20px;
+    padding-inline-start: 0 !important;
+  
+}
+
+.header-icon ul li{
+    margin-right: 20px;
+}
+
+
+.header-mail {
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-left: 10px;
+}
+
+.header-sdt{
+    display: flex;
+    align-items: center;
+    color: white;
+    margin-left: 10px;
+}
+
+.header-search{
+    margin-left: 30px;
+}
+
+.header-auth{
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.container-header-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    margin: auto;
+    width: 80%;
+    
+}
+
+.container-carousel{
+    position: relative;
+}
+
+.carousel-overlay::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(5, 1, 51, 0.7);
+}
+
+.carousel-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin-top: 5% ;
+}
+
+.carousel-content h3{
+
+    color: #ff630e;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.carousel-content h2{
+    color: #fff;
+    font-size: 70px;
+    line-height: 77px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.carousel-content p{
+    color: #fff;
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 30px;
+}
+
+.buttonStyle {
+    background: #ff630e;
+    border: none;
+    color: #fff;
+    padding: 20px 15px;
+    border-radius: 5px;
+    font-size:16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.buttonStyle:hover {
+    background:#cd4e0a;
+}
+.about-us{
+    background-image: url("https://bsmart.edu.vn/assets/images/background.webp");
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    position: relative;
+    
+}
+
+.parallax-container::before{
+    background: rgba(255, 255, 255, 0.7);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    position: absolute;
+  
+}
+
+.aboutUs-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    padding: 20px 40px;
+    
+}
+
+.aboutUs-content p {
+    
+    text-align: justify;
+}
+
+.aboutUs-right img{
+    box-shadow: 0 0 15px #000;
+}
+
+.advantage-top{
+    margin: 70px auto;
+    text-align: center;
+    width: 80%;
+
+}
+
+.avantage .container-content {
+    margin-bottom: 50px;
+}
+
+.avantage .advantage-item .item-title{
+    display: flex;
+    color: #ff630e;
+    align-items: center;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.3;
+    vertical-align: middle;
+}
+
+.avantage .advantage-item .item-title p{
+    margin-left: 10px;
+}
+
+.avantage .advantage-item .item-content {
+    text-align:  left;
+    line-height: 30px;
+    font-size: 20px;
+    text-align: justify;
+    padding: 10px 0;
+    font-weight: 500;
+    position: relative;
+}
+
+
+.img-item-left{
+    position: relative;
+}
+
+.img-content-left{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.img-item-right{
+    position: relative;
+}
+
+.img-content-right{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+.avantage .img-left {
+    background-image: url("https://bsmart.edu.vn/assets/images/banner/banner-3.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 10vh;
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+    padding: 220px 0;
+    overflow: hidden;
+    cursor: pointer;
+     color: white;
+}
+
+.avantage .img-left::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    z-index: 0;
+}
+
+.avantage .img-right {
+    background-image: url("https://bsmart.edu.vn/assets/images/banner/banner-4.webp");
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+    padding: 220px 0;
+    height: 10vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
+
+.avantage .img-right::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.container-img{
+    margin: auto;
+    width: 100% !important;
+}
+
+.course{
+    text-align: center;
+    margin: 50px auto;
+    width: 80%;
+}
+
+.route{
+    position: relative;
+}
+.route-container{
+    background-image: url("https://bsmart.edu.vn/assets/images/funfact_bg.webp");
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    position: relative;
+}
+
+.route-container::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 0;
+}
+
+.route-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+/* @media (max-width: 1440px) {
+    .hearder-top .hearder-search{
+        opacity: 1;
+    }   
+}
+@media (max-width: 1200px) {
+    .hearder-top .hearder-search{
+        opacity:0;
+    }   
+}
+@media (max-width: 600px) {
+    .hearder-top .hearder-search{
+        opacity: 0;
+    }   
+} */
