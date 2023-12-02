@@ -17,7 +17,7 @@ const HomeCarousel = () => {
 
 
   return (
-    <div className="carousel">
+    <div className="carousel" style={{}}>
       <div className="container-carousel">
         <div className="carousel-overlay " style={contentStyle}></div>
       </div>
@@ -27,7 +27,7 @@ const HomeCarousel = () => {
         </h3>
         <h2 className="">Trở thành lập trình viên chuyên nghiệp tại BSMART</h2>
         <p>Với đội ngũ Mentor có nhiều năm kinh nghiệm giảng dạy cùng các khóa học chất lượng. BSMART sẽ giúp các bạn có định hướng về nghề nghiệp và phát triển bản thân trên con đường trở thành lập trình viên chuyên nghiệp</p>
-        <button className="buttonStyle">Khóa học</button>
+        <button className="buttonStyle">Xem Khóa học</button>
       </div>
     </div>
   );

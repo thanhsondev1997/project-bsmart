@@ -11,7 +11,7 @@ const HomeAvantage = () => {
           Điểm ưu việt tại BSmart
         </h2>
         <Row className="container-content" gutter={[32, 32]}>
-          <Col className="advantage-item" span={8}>
+          <Col className="advantage-item" span={8} xl={8} lg={24} md={24} sm={24} xs={24}>
             <div className="item-title">
               <i class="fa-regular fa-circle-check"></i>
               <p>Học theo lộ trình, có định hướng</p>
@@ -24,7 +24,7 @@ const HomeAvantage = () => {
               </p>
             </div>
           </Col>
-          <Col className="advantage-item" span={8}>
+          <Col className="advantage-item" span={8} xl={8} lg={24} md={24} sm={24} xs={24}>
             <div className="item-title">
               <i class="fa fa-cogs"></i>
               <p>Nền tảng cốt lõi trong lập trình</p>
@@ -37,7 +37,7 @@ const HomeAvantage = () => {
               </p>
             </div>
           </Col>
-          <Col className="advantage-item" span={8}>
+          <Col className="advantage-item" span={8} xl={8} lg={24} md={24} sm={24} xs={24}>
             <div className="item-title">
               <i class="fa-solid fa-fire"></i>
               <p>Mài giũa bạn qua thực tế</p>
@@ -50,7 +50,7 @@ const HomeAvantage = () => {
               </p>
             </div>
           </Col>
-          <Col className="advantage-item" span={8}>
+          <Col className="advantage-item" span={8} xl={8} lg={24} md={24} sm={24} xs={24}>
             <div className="item-title">
               <i class="fa-solid fa-users"></i>
               <p>Mentor tận tâm</p>
@@ -63,7 +63,7 @@ const HomeAvantage = () => {
               </p>
             </div>
           </Col>
-          <Col className="advantage-item" span={8}>
+          <Col className="advantage-item" span={8} xl={8} lg={24} md={24} sm={24} xs={24}>
             <div className="item-title">
               <i class="fa-solid fa-qrcode"></i>
               <p>Công nghệ mới, thực tế</p>
@@ -75,7 +75,7 @@ const HomeAvantage = () => {
               </p>
             </div>
           </Col>
-          <Col className="advantage-item" span={8}>
+          <Col className="advantage-item" span={8} xl={8} lg={24} md={24} sm={24} xs={24}>
             <div className="item-title">
               <i class="fa-solid fa-trophy"></i>
               <p>Trao tay chìa khóa thành công</p>
@@ -93,14 +93,14 @@ const HomeAvantage = () => {
 
       </div>
       <Row className="container-img" gutter={[0, 0]}>
-        <Col className="img-item-left" span={12}>
+        <Col className="img-item-left" span={12} xl={12} lg={24} md={24} sm={24} xs={24}>
           <div className="img-left"></div>
           <div style={{ color: "white", textAlign:"center" }} className="img-content-left">
             <h2 style={{ fontSize: "42px", fontWeight: "700" }}>Trái Ngành</h2>
             <p style={{ fontSize: "20px" }}>From Zero to Hero</p>
           </div>
         </Col>
-        <Col className="img-item-right" span={12}>
+        <Col className="img-item-right" span={12} xl={12} lg={24} md={24} sm={24} xs={24}>
           <div className="img-right"></div>
           <div style={{ color: "white", textAlign:"center" }} className="img-content-right">
             <h2 style={{ fontSize: "42px", fontWeight: "700" }}>

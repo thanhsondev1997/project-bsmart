@@ -1,14 +1,33 @@
 * {
     margin: 0;
+    box-sizing: border-box;
+}
+
+.body{
+    font-size: 16px;
+}
+
+/* Header */
+.header .container {
+    position: relative;
+    z-index: 1000;
 }
 
 .header-top {
     background-color: #0e0a38;
 }
+.header-bottom {
+    position: sticky;
+    width: 100%;
+    /* margin-top: 100px; */
+    background-color: #fff;
+    z-index: 2;
+    height: 110px;
+}
 
 .container-header-top {
     margin: auto;
-    width: 80%;
+    width: 85%;
     display: flex;
     align-items: center;
     padding: 23px 0;
@@ -45,7 +64,48 @@
 }
 
 .header-search{
-    margin-left: 30px;
+    
+    width: 447px;
+    height: 40px;
+    position: relative;
+ 
+}
+
+.header-search .search{
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding-left: 20px;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    caret-color: white;
+}
+.header-search input::placeholder {
+    color: white;
+}
+
+.header-search input:focus {
+    color: #212529;
+
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13,110,253,.25);
+}
+
+.header-search .buttonSearch{
+    display: contents;
+
+   
+}
+
+.header-search .buttonSearch i{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    right: 14px;
+    color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(0,0,0,0);
 }
 
 .header-auth{
@@ -61,13 +121,133 @@
     justify-content: space-between;
     padding: 20px 0;
     margin: auto;
-    width: 80%;
+    width: 85%;
     
 }
 
-.container-carousel{
+.header-bottom nav{
+    font-weight: 600;
+    font-size: 17px;
+    color: #000 !important;
+    text-decoration: none;
+}
+
+
+.header-bottom .currentActive{
+    color: #ff630e;
+}
+
+/* header-mobile */
+
+.nav_bar-btn{
+    display: none;
+}
+
+.nav-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    animation: navAnimation linear 0.3s;
+}
+
+.nav-mobile{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 320px;
+    max-width: 100%;
+    background: #fff;
+    z-index: 2;
+    transform: translateX(100%);
+    transition: transform linear 0.3s;
+}
+
+.nav-container-mobile{
+    margin-top: 20px;
+}
+
+.nav-link-mobile{
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #0e0a38;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 8px 0;
+    margin-left: 10px;
+    
+}
+
+.nav-mobile-close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+   
+}
+
+.nav-input:checked ~ .nav-overlay{
+    display: block;
+}
+.nav-input:checked ~ .nav-mobile{
+    transform: translateX(0%);
+}
+
+@media (max-width: 1024px) {
+    .header-search{
+        display: none;
+    }
+    .header{
+        height: 15vh !important;
+    }
+
+}
+
+
+@media (max-width: 1023px){
+    .nav_bar-btn{
+        display: block;
+
+    }
+    .header-top{
+        display: none;
+    }
+    .nav-menu{
+        display: none !important;
+    }
+    .gioHang{
+        display: none;
+    }
+    .header{
+        height: 10vh !important;
+    }
+
+}
+
+@media (max-width: 440px) {
+    .header{
+        height: 5vh !important;
+    }
+}
+
+@keyframes navAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Carousel */
+.carousel{
     position: relative;
 }
+
 
 .carousel-overlay::before{
     content: '';
@@ -80,12 +260,13 @@
 }
 
 .carousel-content {
+    margin: auto;
+    width: 80%;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    margin-top: 5% ;
 }
 
 .carousel-content h3{
@@ -111,23 +292,48 @@
     font-size: 16px;
     line-height: 26px;
     margin-bottom: 30px;
+    padding: 0 200px;
 }
 
 .buttonStyle {
-    background: #ff630e;
-    border: none;
+    background-color: #ff630e;
     color: #fff;
-    padding: 20px 15px;
+    padding: 20px 7px;
     border-radius: 5px;
-    font-size:16px;
+    font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
+    border: #ff630e;
+
 }
 
+
 .buttonStyle:hover {
-    background:#cd4e0a;
+    background-color: #fff;
+    color: #ff630e;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: all 0.2s;
 }
+
+@media (max-width: 1023px) {
+    .carousel-content h2{
+        font-size: 40px;
+        line-height: 44px;
+    }
+    .carousel-content p {
+        padding: 0;
+    }
+}
+@media (max-width: 932px) {
+    .carousel-content{
+        width: 90% !important;
+        text-align: center;
+    }
+}
+
+/* abouUs */
 .about-us{
     background-image: url("https://bsmart.edu.vn/assets/images/background.webp");
     height: 90vh;
@@ -155,8 +361,8 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80%;
-    padding: 20px 40px;
+    width: 100%;
+    padding:10%;
     
 }
 
@@ -167,7 +373,67 @@
 
 .aboutUs-right img{
     box-shadow: 0 0 15px #000;
+    border-radius: 10px;
+    width: 100%;
 }
+
+@media (max-width: 1200px) {
+    .custom-row-aboutUS{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .aboutUs-content{
+        width: 100%;
+    }
+}
+@media (max-width: 992px) {
+    .aboutUs-left p {
+        font-size: 15px !important;
+    }
+    .custom-row-aboutUS{
+        display: flex;
+        flex-direction: column;
+    }
+    .aboutUs-right img{
+        width: 480px !important;
+        height: 271px !important;
+        margin-top: 10px;
+    }
+    .about-us{
+        height: 80vh;
+    }
+}
+
+@media (max-width: 767px) {
+    .aboutUs-left p {
+        font-size: 15px !important;
+    }
+
+    .custom-row-aboutUS{
+        display: flex;
+        flex-direction: column;
+    }
+    .aboutUs-right img{
+        width: 356px !important;
+        height: 251px !important;
+    }
+
+}
+@media (max-width: 565px) {
+    .aboutUs-left .buttonStyle{
+        font-size: 14px !important;
+        padding: 10px !important;
+    }
+
+    .aboutUs-right img{
+        width: 315px !important;
+        height: 200px !important;
+    }
+}
+
+
+/* advantage */
 
 .advantage-top{
     margin: 70px auto;
@@ -208,6 +474,11 @@
 
 .img-item-left{
     position: relative;
+    clip-path: polygon(0 0, 100% 15%, 100% 100%, 0% 100%);
+}
+
+.img-item-left:hover .img-left::before{
+    background: rgba(0, 0, 0, 0.1);
 }
 
 .img-content-left{
@@ -220,6 +491,11 @@
 
 .img-item-right{
     position: relative;
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+}
+
+.img-item-right:hover .img-right::before{
+    background: rgba(0, 0, 0, 0.1);
 }
 
 .img-content-right{
@@ -283,6 +559,48 @@
     margin: auto;
     width: 100% !important;
 }
+@media (max-width: 1200px) {
+    .img-item-left{
+        clip-path: none;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+    .avantage .img-left {
+        clip-path: none;
+        border-radius: 10px;
+    }
+
+    .img-item-right{
+        clip-path: none;
+        border-radius: 10px;
+    }
+    .avantage .img-right{
+        clip-path: none;
+        border-radius: 10px;
+    }
+}
+@media (max-width: 992px) {
+    .img-item-left{
+        clip-path: none;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+    .avantage .img-left {
+        clip-path: none;
+        border-radius: 10px;
+    }
+
+    .img-item-right{
+        clip-path: none;
+        border-radius: 10px;
+    }
+    .avantage .img-right{
+        clip-path: none;
+        border-radius: 10px;
+    }
+}
+
+/* course */
 
 .course{
     text-align: center;
@@ -324,18 +642,228 @@
     transform: translate(-50%, -50%);
     z-index: 2;
 }
-/* @media (max-width: 1440px) {
-    .hearder-top .hearder-search{
-        opacity: 1;
-    }   
+
+@media (max-width: 1023px) {
+    .route-content{
+        width: 80% !important;
+    }
+    .route-container{
+        
+        height: 30vh;
+    }
 }
-@media (max-width: 1200px) {
-    .hearder-top .hearder-search{
-        opacity:0;
-    }   
-}
-@media (max-width: 600px) {
-    .hearder-top .hearder-search{
-        opacity: 0;
-    }   
+
+/* @media (max-width: 480px) {
+    .course{
+        margin-left: 66px;
+    }
 } */
+/* HomePartners */
+
+.banner{
+    height: 300px;
+    position: relative;
+}
+
+.banner-img{
+    background-image: url("https://bsmart.edu.vn/assets/images/banner/banner-2.webp");
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    position: relative;
+}
+
+.banner-img::before{
+    content: '';
+    background: rgba(19, 15, 64, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+
+@media (max-width: 1023px) {
+    .show-partner img{
+        width: 160px !important;
+        height: 100px !important;
+    }
+}
+
+@media (max-width: 575px) {
+
+    .show-partner img{
+        width: 387px !important;
+        height: 100px !important;
+    }
+    .route-content .buttonStyle{
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+
+/* footer */
+:where(.css-dev-only-do-not-override-1adbn6x).ant-card .ant-card-head{
+    padding: 0 !important;
+}
+
+.buttontype{
+    width: 100%;
+    padding: 16px;
+    background: #ff630e;
+    margin-top: 10px;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    border: #ff630e;
+}
+
+.buttontype:hover{
+    background-color: #fff;
+    color: #ff630e;
+    opacity: 0.8;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid #ff630e;
+}
+
+.nav-link {
+    color: black;
+    transition: color 0.3s ease; 
+    text-decoration: none;
+    margin-right: 10px;
+    padding: 10px 5px;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  
+  .nav-link.active,
+  .nav-link:active,
+  .nav-link:focus {
+    color: #ff630e; 
+  }
+
+
+
+
+
+@media (max-width: 1023px) {
+    .footer-container{
+        width: 100% !important;
+    }
+    
+}
+
+/* khoahoc */
+.filter-mobile{
+    display: none;
+}
+@media (max-width:1200px) {
+    .khoahoc{
+        width: 90% !important;
+    }
+}
+
+@media (max-width:976px) {
+    .item-khoahoc .img-title{
+        width: 100% !important;
+    }
+}
+@media (max-width: 576px) {
+    .banner-content{
+        width: 90%;
+    }
+    .soKhoaHoc{
+        font-size: 12px !important;
+    }
+    .container-khoahoc{
+        display: flex;
+        flex-direction: column;
+    }
+    .filter-decktop{
+        display: none;
+    }
+    .filter-mobile{
+        display: block;
+    }
+}
+
+
+/* detail */
+
+:where(.css-dev-only-do-not-override-1adbn6x).ant-card{
+    line-height: normal !important;
+}
+
+:where(.css-dev-only-do-not-override-1adbn6x).ant-card .ant-card-body {
+    padding: 10px;
+}
+
+@media (max-width: 1023px) {
+    .nameKhoaHoc{
+        font-size: 35px !important;
+    }
+    .detailCourse-carousel{
+        width: 80%;
+    }
+    :where(.css-dev-only-do-not-override-1adbn6x)[class^="ant-col"] [class^="ant-col"], :where(.css-dev-only-do-not-override-1adbn6x)[class*=" ant-col"] [class^="ant-col"], :where(.css-dev-only-do-not-override-1adbn6x)[class^="ant-col"] [class*=" ant-col"], :where(.css-dev-only-do-not-override-1adbn6x)[class*=" ant-col"] [class*=" ant-col"] {
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .nameKhoaHoc{
+        font-size: 35px !important;
+    }
+    .detailCourse-carousel{
+        width: 80%;
+    }
+    :where(.css-dev-only-do-not-override-1adbn6x)[class^="ant-col"] [class^="ant-col"], :where(.css-dev-only-do-not-override-1adbn6x)[class*=" ant-col"] [class^="ant-col"], :where(.css-dev-only-do-not-override-1adbn6x)[class^="ant-col"] [class*=" ant-col"], :where(.css-dev-only-do-not-override-1adbn6x)[class*=" ant-col"] [class*=" ant-col"] {
+        text-align: center !important;
+    }
+}
+
+@media (max-width: 560px) {
+    .nameKhoaHoc{
+        font-size: 35px !important;
+    }
+    .detailCourse-carousel{
+        width: 100%;
+    }
+    :where(.css-dev-only-do-not-override-1adbn6x)[class^="ant-col"] [class^="ant-col"], :where(.css-dev-only-do-not-override-1adbn6x)[class*=" ant-col"] [class^="ant-col"], :where(.css-dev-only-do-not-override-1adbn6x)[class^="ant-col"] [class*=" ant-col"], :where(.css-dev-only-do-not-override-1adbn6x)[class*=" ant-col"] [class*=" ant-col"] {
+        text-align: center !important;
+    }
+
+}
+
+.customNextLeft,
+.customNextRight {
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+   
+}
+
+.customNextLeft {
+    left: -15px;
+}
+
+.customNextRight {
+    right: -10px;
+}
